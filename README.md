@@ -5,7 +5,7 @@ I made my RPi have a static IP so it takes only one constant IP.
 https://www.raspberrypi.org/documentation/configuration/tcpip/
 
 I've set a list of known wifi networks in wpa_supplicant.conf
-   #### sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+####           sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 
 ## Download and Open Tutorial Rasp MQTT.pdf 
