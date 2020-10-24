@@ -5,5 +5,7 @@ Send DHT temperature and humidity to RPi with ESP32 and MQTT
  
  Follow the steps to accomplish goal:
  ### - Setup Mosquitto
+ Click on "Broker Tutorial.url" for more info
+ 
  ### - Code for ESP32 MQTT publish
-  
+ Click on "Publish MQTT ESP32 data.url" for more info 
