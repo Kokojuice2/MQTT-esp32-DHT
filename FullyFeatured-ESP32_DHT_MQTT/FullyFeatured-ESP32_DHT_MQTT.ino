@@ -1,5 +1,23 @@
 /*
-This example uses FreeRTOS softwaretimers as there is no built-in Ticker library
+
+Don't forget to downoad two necessary libraries:
+	* Async MQTT Client 
+	* Asynch TCP 
+	
+Add those ZIP to your Arduino IDE
+	Sketch > Add Library > Add .ZIP Library
+		Select the folders (probably in Downloads) and import
+		Restart IDE
+
+Wire DHT11 :	Signal to D2, 3v3, GND
+
+Set WiFi Network info in this code
+Set IP address of Raspberry Pi MQTT Broker
+Set topic names for MQTT
+
+Upload this code to ESP32
+https://randomnerdtutorials.com/esp32-mqtt-publish-bme280-arduino/
+
 */
 
     // Requirements: 
@@ -28,14 +46,14 @@ extern "C" {
 	#include "freertos/timers.h"
 }
 
-#define WIFI_SSID "G Phone"                  // ENTER your wifi SSID
-#define WIFI_PASSWORD "Easy1234*"              // ENTER your wifi password
+#define WIFI_SSID "______"                  		// ENTER your wifi SSID
+#define WIFI_PASSWORD "_______"              		// ENTER your wifi password
 
 
 // MQTT --------------------------
 #include <AsyncMqttClient.h>
 
-#define MQTT_HOST IPAddress(172, 20, 10, 5)
+#define MQTT_HOST IPAddress(172, 20, 10, 5)		// <--- Change this IP address to your Raspberry's IP address
 #define MQTT_PORT 1883
 
 AsyncMqttClient mqttClient;
@@ -43,8 +61,8 @@ TimerHandle_t mqttReconnectTimer;
 TimerHandle_t wifiReconnectTimer;
 
 // Temperature MQTT Topics
-#define MQTT_PUB_TEMP "esp32/temperature"
-#define MQTT_PUB_HUM "esp32/humidity"
+#define MQTT_PUB_TEMP "esp32/temperature"		// <--- Give the topics other names if you want
+#define MQTT_PUB_HUM "esp32/humidity"			// <--- Same here
 //#define MQTT_PUB_PRES "esp32/pressure"
 
 //------------------------------------
