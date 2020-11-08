@@ -16,7 +16,10 @@ Set IP address of Raspberry Pi MQTT Broker
 Set topic names for MQTT
 
 Upload this code to ESP32
-https://randomnerdtutorials.com/esp32-mqtt-publish-bme280-arduino/
+  copied and modified from : https://randomnerdtutorials.com/esp32-mqtt-publish-bme280-arduino/
+
+Still need to add SSL security protocol:
+  copied and modified http://www.lucadentella.it/en/2017/12/04/esp32-28-mqtt-e-ssl/
 
 */
 
