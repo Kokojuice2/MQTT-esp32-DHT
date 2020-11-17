@@ -44,9 +44,9 @@ float temp, hum;
 
 // WIFI -------------------------
 #include <WiFi.h>
-extern "C" {
-	#include "freertos/FreeRTOS.h"
-	#include "freertos/timers.h"
+//extern "C" {
+//	#include "freertos/FreeRTOS.h"
+//	#include "freertos/timers.h"
 }
 
 #define WIFI_SSID "______"                  		// ENTER your wifi SSID
